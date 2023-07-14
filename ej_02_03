@@ -1,0 +1,29 @@
+def ratiopago(horas,ratio) :
+    
+    try :
+        horas = float(horas)
+        ratio = float(ratio)
+    
+    except :
+        print("Error, el input debe ser un numero")
+        quit()
+    
+    pago = horas*ratio             #Pago a obtener por las horas trabajadas
+    extra = 40.0
+    if horas > extra :
+        horas_extra = (horas - 40)*1.5*ratio
+        pago = 40*ratio + horas_extra
+        print("El trabajador se beneficia de horas extras")
+    else :
+        print ("El trabajador no ha realizado horas extras")
+
+    print("Computando...")
+    
+    return pago
+
+hs = input("Ingrese las horas trabajadas: ")
+hr = input("Ingrese el valor de la hora trabajada: ")
+
+xp = ratiopago(hs,hr)
+
+print("El pago a realizar es de:",xp,"pesos")
