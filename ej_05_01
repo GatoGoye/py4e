@@ -1,0 +1,31 @@
+print ("Ingrese numeros, para obtener los resultados, escriba Finalizar")
+
+sum = 0
+count = 0
+
+while True:
+    n_i = input("Ingresa un número: ")
+
+    if n_i == "Finalizar" :
+        break
+    
+    try:
+        numb = float(n_i)
+
+    except:
+        print ("Error, Se debe ingresar un número")
+        continue
+
+    sum = sum + numb
+    count = count + 1
+
+print ("Listo, Calculando: ")
+
+if count != 0:
+    print ("Suma: ", sum)
+    print ("Cantidad de numeros: ", count)
+    print ("Promedio: ", sum/count)
+
+else :
+    print("No se han ingresado datos")
+    quit()
